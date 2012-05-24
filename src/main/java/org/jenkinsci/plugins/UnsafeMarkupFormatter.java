@@ -25,7 +25,7 @@ public class UnsafeMarkupFormatter extends MarkupFormatter {
     public static class DescriptorImpl extends MarkupFormatterDescriptor {
         @Override
         public String getDisplayName() {
-            return "Allows arbitrary HTML includin JavaScript (UNSAFE)";
+            return "Allows arbitrary HTML including JavaScript (UNSAFE)";
         }
     }
 }
