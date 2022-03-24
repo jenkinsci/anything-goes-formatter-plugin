@@ -3,14 +3,19 @@
   <parent>
     <groupId>org.jenkins-ci.plugins</groupId>
     <artifactId>plugin</artifactId>
-    <version>1.424</version>
+    <version>4.33</version>
   </parent>
+
+  <properties>
+    <jenkins.version>2.289.1</jenkins.version>
+    <java.level>8</java.level>
+  </properties>
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>anything-goes-formatter</artifactId>
   <version>1.1-SNAPSHOT</version>
   <packaging>hpi</packaging>
-  <url>https://wiki.jenkins-ci.org/pages/viewpage.action?pageId=60915753</url>
+  <url>https://wiki.jenkins-ci.org/JENKINS/60915753.html</url>
 
   <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
   <repositories>

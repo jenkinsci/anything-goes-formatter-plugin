@@ -1,3 +1,4 @@
+<?jelly escape-by-default='true'?>
 <div>
   This plugin adds a markup formatter that's unsafe but allows more powerful
   HTML manipulation.

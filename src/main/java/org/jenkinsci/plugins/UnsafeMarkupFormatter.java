@@ -18,7 +18,9 @@ public class UnsafeMarkupFormatter extends MarkupFormatter {
 
     @Override
     public void translate(String markup, Writer output) throws IOException {
-        output.write(markup);
+        if (markup != null) {
+            output.write(markup);
+        }
     }
 
     @Extension
