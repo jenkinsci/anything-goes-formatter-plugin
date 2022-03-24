@@ -13,7 +13,7 @@
 
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>anything-goes-formatter</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>hpi</packaging>
   <url>https://wiki.jenkins-ci.org/JENKINS/60915753.html</url>
 
@@ -44,5 +44,6 @@
     <connection>scm:git:ssh://github.com/jenkinsci/anything-goes-formatter-plugin.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/jenkinsci/anything-goes-formatter-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/anything-goes-formatter-plugin</url>
+    <tag>anything-goes-formatter-1.1</tag>
   </scm>
 </project>
