@@ -36,8 +36,8 @@
   </developers>
 
   <scm>
-    <connection>scm:git:ssh://github.com/jenkinsci/anything-goes-formatter.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/anything-goes-formatter.git</developerConnection>
-    <url>https://github.com/jenkinsci/anything-goes-formatter</url>
+    <connection>scm:git:ssh://github.com/jenkinsci/anything-goes-formatter-plugin.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/jenkinsci/anything-goes-formatter-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/anything-goes-formatter-plugin</url>
   </scm>
 </project>
