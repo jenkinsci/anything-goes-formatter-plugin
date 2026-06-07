@@ -1,0 +1,19 @@
+name: Rebase open PRs
+
+on:
+  workflow_run:
+    workflows: ['Sync fork from upstream']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  rebase-prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mPokornyETM/rebase-open-prs-action@v1
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
