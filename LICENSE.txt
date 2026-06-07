@@ -1,9 +1,6 @@
 The MIT License
 
-Copyright 2013-2015, 6WIND S.A.
-Copyright 2016-2018, Antonio Muñiz
-Copyright 2019-2021, TobiX
-Copyright 2022-2026, Martin Pokorny and contributors
+Copyright (c) Jenkins project contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
