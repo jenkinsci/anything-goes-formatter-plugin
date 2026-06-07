@@ -12,7 +12,6 @@ The goal is consistent, safe, and reviewable contributions across plugins.
 
 ## Issue and PR linking
 
-- Link Jira issues as `JENKINS-XXXXX` when applicable.
 - Link GitHub issues as `#123`.
 - Use closing keywords (`Fixes #123`) only when fully resolved.
 - Minor maintenance tasks may not need an issue unless maintainers request one.
