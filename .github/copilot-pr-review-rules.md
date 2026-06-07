@@ -11,7 +11,7 @@ Use this checklist when reviewing, triaging, or cleaning up pull requests.
 
 ### 2. Validate linked issues
 
-- Confirm linked Jira/GitHub issues match the change intent.
+- Confirm linked GitHub issues match the change intent.
 - Minor chores may not require an issue unless repository policy says otherwise.
 
 ### 3. Validate implementation quality
