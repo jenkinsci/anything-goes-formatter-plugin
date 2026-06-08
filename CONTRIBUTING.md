@@ -4,7 +4,7 @@ Thanks for contributing to anything-goes-formatter-plugin.
 
 ## Prerequisites
 
-- Java 11+
+- Java 21+ (Jenkins recommended)
 - Apache Maven 3.9+
 
 ## Build and Test
