@@ -1,4 +1,4 @@
-<!-- Link related issue(s): Fixes #XXXXX or See JENKINS-XXXXX -->
+<!-- Link related issue(s): Fixes #123 or See #123 -->
 
 ## What does this PR do?
 
