@@ -1,2 +1,2 @@
 <?jelly escape-by-default='true'?>
-<div>${%UnsafeMarkupFormatter.index}</div>
+<div>${%unsafeMarkupFormatter.index}</div>
