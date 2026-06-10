@@ -1,2 +1,2 @@
 <?jelly escape-by-default='true'?>
-<div>${%unsafeMarkupFormatter.index}</div>
+<div>This plugin adds a markup formatter that is unsafe but allows more powerful HTML manipulation.</div>
