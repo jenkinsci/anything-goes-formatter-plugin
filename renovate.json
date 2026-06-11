@@ -1,21 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
-  "automerge": false,
-  "platformAutomerge": true,
-  "automergeStrategy": "squash",
-  "labels": ["dependencies"],
-  "dependencyDashboard": true,
+  "extends": [
+    "github>jenkinsci/renovate-config"
+  ],
   "packageRules": [
     {
-      "description": "Auto-merge patch updates when checks pass",
-      "matchUpdateTypes": ["patch"],
-      "automerge": true
-    },
-    {
-      "description": "Do not auto-merge major updates",
-      "matchUpdateTypes": ["major"],
-      "automerge": false
+      "matchPackageNames": [
+        "org.json:json"
+      ],
+      "maxMajorIncrement": 0
     }
   ]
 }
