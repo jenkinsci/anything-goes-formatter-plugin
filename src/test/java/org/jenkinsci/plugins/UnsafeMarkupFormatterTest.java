@@ -5,30 +5,35 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 import hudson.markup.MarkupFormatter;
-import java.io.IOException;
 import java.io.StringWriter;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.jvnet.hudson.test.JenkinsRule;
+import org.jvnet.hudson.test.junit.jupiter.WithJenkins;
 
-public class UnsafeMarkupFormatterTest {
+@WithJenkins
+class UnsafeMarkupFormatterTest {
 
-    @Rule
-    public JenkinsRule j = new JenkinsRule();
+    private JenkinsRule j;
+
+    @BeforeEach
+    void beforeEach(JenkinsRule rule) {
+        j = rule;
+    }
 
     // -------------------------------------------------------------------------
     // translate() — unit-level behaviour
     // -------------------------------------------------------------------------
 
     @Test
-    public void translatePassesThroughPlainText() throws IOException {
+    void translatePassesThroughPlainText() throws Exception {
         StringWriter out = new StringWriter();
         newFormatter().translate("hello world", out);
         assertThat(out.toString(), is("hello world"));
     }
 
     @Test
-    public void translatePassesThroughHtmlMarkup() throws IOException {
+    void translatePassesThroughHtmlMarkup() throws Exception {
         StringWriter out = new StringWriter();
         String input = "<b>bold</b> and <em>italic</em>";
         newFormatter().translate(input, out);
@@ -36,7 +41,7 @@ public class UnsafeMarkupFormatterTest {
     }
 
     @Test
-    public void translatePassesThroughScriptTags() throws IOException {
+    void translatePassesThroughScriptTags() throws Exception {
         // The whole point of this formatter is that it passes everything through
         // unchanged — including potentially unsafe script tags.
         StringWriter out = new StringWriter();
@@ -46,14 +51,14 @@ public class UnsafeMarkupFormatterTest {
     }
 
     @Test
-    public void translateHandlesNullWithoutWriting() throws IOException {
+    void translateHandlesNullWithoutWriting() throws Exception {
         StringWriter out = new StringWriter();
         newFormatter().translate(null, out);
         assertThat(out.toString(), is(""));
     }
 
     @Test
-    public void translateHandlesEmptyString() throws IOException {
+    void translateHandlesEmptyString() throws Exception {
         StringWriter out = new StringWriter();
         newFormatter().translate("", out);
         assertThat(out.toString(), is(""));
@@ -64,20 +69,20 @@ public class UnsafeMarkupFormatterTest {
     // -------------------------------------------------------------------------
 
     @Test
-    public void descriptorDisplayNameIsCorrect() {
+    void descriptorDisplayNameIsCorrect() {
         UnsafeMarkupFormatter.DescriptorImpl d = new UnsafeMarkupFormatter.DescriptorImpl();
         assertThat(d.getDisplayName(), is("Allows arbitrary HTML including JavaScript (UNSAFE)"));
     }
 
     @Test
-    public void pluginIsRegisteredAsMarkupFormatter() {
+    void pluginIsRegisteredAsMarkupFormatter() {
         // Verify that the @Extension is picked up and registered with Jenkins.
         UnsafeMarkupFormatter.DescriptorImpl descriptor = j.jenkins.getDescriptorByType(UnsafeMarkupFormatter.DescriptorImpl.class);
         assertThat("UnsafeMarkupFormatter descriptor must be registered", descriptor, notNullValue());
     }
 
     @Test
-    public void formatterCanBeSetOnJenkinsInstance() throws Exception {
+    void formatterCanBeSetOnJenkinsInstance() {
         UnsafeMarkupFormatter formatter = newFormatter();
         j.jenkins.setMarkupFormatter(formatter);
         MarkupFormatter active = j.jenkins.getMarkupFormatter();

@@ -1,5 +1,2 @@
 <?jelly escape-by-default='true'?>
-<div>
-  This plugin adds a markup formatter that's unsafe but allows more powerful
-  HTML manipulation.
-</div>
+<div>This plugin adds a markup formatter that is unsafe but allows more powerful HTML manipulation.</div>
